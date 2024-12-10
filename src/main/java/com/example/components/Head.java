@@ -1,4 +1,4 @@
-package src.main;
+package com.example.components;
 
 public class Head {
     private Tape tape;
@@ -15,11 +15,12 @@ public class Head {
         tape.write(symbol);
     }
 
-    public void moveLeft() {
-        tape.moveLeft();
-    }
-
-    public void moveRight() {
-        tape.moveRight();
+    public void move(Direction direction) {
+        if (direction == Direction.LEFT) {
+            tape.moveLeft();
+        } else {
+            tape.moveRight();
+        }
     }
 }
+

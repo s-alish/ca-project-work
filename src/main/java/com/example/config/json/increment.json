@@ -1,0 +1,42 @@
+{
+  "tape": "111010",
+  "states": ["q0", "qCarry", "qAccept"],
+  "transitions": [
+    {
+      "currentState": "q0",
+      "readSymbol": "1",
+      "writeSymbol": "1",
+      "nextState": "q0",
+      "direction": "RIGHT"
+    },
+    {
+      "currentState": "q0",
+      "readSymbol": "0",
+      "writeSymbol": "1",
+      "nextState": "qCarry",
+      "direction": "LEFT"
+    },
+    {
+      "currentState": "qCarry",
+      "readSymbol": "1",
+      "writeSymbol": "0",
+      "nextState": "qCarry",
+      "direction": "LEFT"
+    },
+    {
+      "currentState": "qCarry",
+      "readSymbol": "0",
+      "writeSymbol": "1",
+      "nextState": "qAccept",
+      "direction": "RIGHT"
+    },
+    {
+      "currentState": "qCarry",
+      "readSymbol": " ",
+      "writeSymbol": "1",
+      "nextState": "qAccept",
+      "direction": "RIGHT"
+    }
+  ],
+  "initialState": "q0"
+}

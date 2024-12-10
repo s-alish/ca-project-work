@@ -1,4 +1,4 @@
-package src.main;
+package com.example.components;
 
 public class State {
     private String name;
@@ -10,4 +10,10 @@ public class State {
     public String getName() {
         return name;
     }
+
+    @Override
+    public String toString() {
+        return name;
+    }
 }
+

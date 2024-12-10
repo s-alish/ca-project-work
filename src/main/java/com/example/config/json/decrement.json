@@ -1,0 +1,49 @@
+{
+  "tape": "0110",
+  "states": ["q0", "qBorrow", "qAccept"],
+  "transitions": [
+    {
+      "currentState": "q0",
+      "readSymbol": "1",
+      "writeSymbol": "0",
+      "nextState": "qBorrow",
+      "direction": "LEFT"
+    },
+    {
+      "currentState": "q0",
+      "readSymbol": "0",
+      "writeSymbol": "1",
+      "nextState": "q0",
+      "direction": "RIGHT"
+    },
+    {
+      "currentState": "q0",
+      "readSymbol": " ",
+      "writeSymbol": "1",
+      "nextState": "qAccept",
+      "direction": "RIGHT"
+    },
+    {
+      "currentState": "qBorrow",
+      "readSymbol": "1",
+      "writeSymbol": "0",
+      "nextState": "qBorrow",
+      "direction": "LEFT"
+    },
+    {
+      "currentState": "qBorrow",
+      "readSymbol": "0",
+      "writeSymbol": "1",
+      "nextState": "q0",
+      "direction": "RIGHT"
+    },
+    {
+      "currentState": "qBorrow",
+      "readSymbol": " ",
+      "writeSymbol": "1",
+      "nextState": "qAccept",
+      "direction": "RIGHT"
+    }
+  ],
+  "initialState": "q0"
+}

@@ -1,19 +1,19 @@
-package src.main;
+package com.example.components;
 
 public class Transition {
     private State currentState;
     private char readSymbol;
     private char writeSymbol;
     private State nextState;
-    private boolean moveRight;
+    private Direction direction;
 
     public Transition(State currentState, char readSymbol, char writeSymbol, 
-                      State nextState, boolean moveRight) {
+                      State nextState, Direction direction) {
         this.currentState = currentState;
         this.readSymbol = readSymbol;
         this.writeSymbol = writeSymbol;
         this.nextState = nextState;
-        this.moveRight = moveRight;
+        this.direction = direction;
     }
 
     public State getCurrentState() {
@@ -32,7 +32,7 @@ public class Transition {
         return nextState;
     }
 
-    public boolean isMoveRight() {
-        return moveRight;
+    public Direction getDirection() {
+        return direction;
     }
 }
