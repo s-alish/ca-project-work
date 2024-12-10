@@ -2,6 +2,32 @@
 **Theme**: Implementation of Turing Machine in Java
 
 ---
+## Final Project Design 
+
+**Overview**
+This project is an implementation of a Turing Machine simulator, designed to simulate and demonstrate the behavior of a Turing Machine. The simulator operates on a given configuration file that defines the tape, states, and transitions of the machine.
+
+**Features**
+ - Simulates binary arithmetic operations (increment and decrement).
+ - Supports user-defined states and transitions via configuration files.
+ - Logs the tape's state after each transition for visualization.
+
+**Project Structure**
+The project is organized into the following main components:
+
+com.example.machine package:
+ - TuringMachine: Main class representing the Turing Machine, handling tape manipulation, head movement, and state transitions.
+ - TuringMachineBuilder: Utility class for building the Turing Machine from a configuration file.
+ - Head: Represents the tape head of the Turing Machine.
+ - State: Represents a state of the Turing Machine.
+ - Tape: Represents the tape with binary content.
+ - Transition: Represents a state transition of the Turing Machine.
+ - 
+com.example.config package:
+ - Configuration: Holds the main configuration details including tape, states, and transitions.
+ - TransitionConfig: Represents the configuration details for each transition.
+Configuration files:
+ - Configuration files (config.json) are used to define the tape content, states, and transition rules for the Turing Machine.
 
 ## Project Proposal: Design and Implementation of a Turing Machine in Java
 1. **Project Topic**
@@ -242,13 +268,5 @@ public class TuringMachine {
 - **Bug Fix 1:** Fixed incorrect head movement logic.
 - **Bug Fix 2:** Resolved issue with reading empty cells (defaulted to `' '`).
 - **Performance:** Optimized state lookup by organizing transitions with a `HashMap`.
-
----
-
-## 6. Next Steps
-- Complete integration of all components.
-- Implement a user interface (CLI/GUI) for better interaction.
-- Test the machine with complex inputs (e.g., binary addition, palindrome detection).
-- Finalize documentation and prepare for submission.
 
 ---
